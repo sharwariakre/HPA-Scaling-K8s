@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: patient-api-service
+  namespace: default
+spec:
+  selector:
+    app: patient-api
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
